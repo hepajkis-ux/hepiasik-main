@@ -1,0 +1,21 @@
+name: Hepiasik Full Automation Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show file structure
+        run: |
+          echo "📂 Repo structure:"
+          ls -R
+
+      - name: Test automation step
+        run: |
+          echo "🚀 Hepiasik automation pipeline ready"
