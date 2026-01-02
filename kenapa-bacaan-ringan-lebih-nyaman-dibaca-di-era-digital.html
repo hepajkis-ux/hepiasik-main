@@ -11,39 +11,73 @@
   <link rel="canonical" href="https://hepiasik.com/kenapa-bacaan-ringan-lebih-nyaman-dibaca-di-era-digital.html">
   <meta name="robots" content="index, follow">
 
-  <!-- CSS ringan, editorial, aman AdSense -->
+  <!-- CSS editorial ringan, ditingkatkan, aman AdSense -->
   <style>
+    :root{
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --bg:#ffffff;
+    }
+
+    *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:#ffffff;
-      color:#1f2937;
-      line-height:1.75;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
+
     main{
       max-width:760px;
       margin:auto;
-      padding:24px 18px 40px;
+      padding:28px 18px 48px;
     }
+
+    article header{
+      margin-bottom:28px;
+    }
+
     article h1{
-      font-size:32px;
+      font-size:clamp(28px, 4vw, 34px);
       line-height:1.25;
-      margin:0 0 16px;
+      margin:0 0 14px;
+      letter-spacing:-0.02em;
     }
+
     article h2{
       font-size:22px;
-      margin:32px 0 10px;
+      line-height:1.35;
+      margin:42px 0 12px;
+      letter-spacing:-0.01em;
     }
+
     article p{
-      margin:0 0 18px;
+      margin:0 0 20px;
       font-size:17px;
     }
+
+    article p + p{
+      margin-top:2px;
+    }
+
     footer.note{
-      margin-top:40px;
-      padding-top:16px;
-      border-top:1px solid #e5e7eb;
+      margin-top:48px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
       font-size:14px;
-      color:#6b7280;
+      color:var(--muted);
+    }
+
+    /* Mobile comfort */
+    @media (max-width:520px){
+      article h1{font-size:26px}
+      article h2{font-size:20px}
+      article p{font-size:16px}
     }
   </style>
 </head>
