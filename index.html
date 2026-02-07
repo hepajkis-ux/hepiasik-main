@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Hepiasik.com — Hiburan Ringan & Bacaan Cepat</title>
-  <meta name="description" content="Hepiasik.com menyajikan hiburan ringan dan bacaan cepat yang ditulis secara orisinal.">
+  <meta name="description" content="Hepiasik.com menyajikan hiburan ringan dan bacaan cepat yang ditulis secara orisinal, nyaman dibaca, dan ramah pengguna.">
   <link rel="canonical" href="https://hepiasik.com/">
   <meta name="robots" content="index,follow">
 
@@ -15,40 +15,124 @@
       --surface:#f6f7f9;
       --text:#1f2937;
       --muted:#6b7280;
+      --brand:#111827;
       --accent:#2563eb;
       --line:#e5e7eb;
       --radius:16px;
       --max:1100px;
     }
+
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       background:var(--bg);
       color:var(--text);
       line-height:1.65;
     }
-    img{max-width:100%;display:block;border-radius:var(--radius)}
+
     a{text-decoration:none;color:inherit}
+    img{max-width:100%;height:auto;display:block;border-radius:var(--radius)}
     .wrap{max-width:var(--max);margin:auto;padding:0 20px}
 
     header{
       border-bottom:1px solid var(--line);
+      background:#fff;
       position:sticky;
       top:0;
-      background:#fff;
-      z-index:10;
+      z-index:100;
     }
+
     .nav{
-      height:64px;
       display:flex;
-      justify-content:space-between;
       align-items:center;
+      justify-content:space-between;
+      height:70px;
     }
-    .brand{font-weight:900;font-size:22px}
+
+    .brand{
+      font-weight:900;
+      font-size:22px;
+    }
+
+    nav a{
+      margin-left:16px;
+      font-weight:600;
+      color:var(--muted);
+    }
+    nav a:hover{color:var(--accent)}
+
+    /* ===== HERO ASLI (TIDAK DIUBAH) ===== */
+    .hero{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:40px;
+      padding:60px 0;
+    }
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;text-align:center}
+    }
+
+    .hero-text h1{
+      font-size:clamp(32px,5vw,48px);
+      line-height:1.1;
+      margin:0 0 20px;
+      color:var(--brand);
+    }
+
+    .hero-text p{
+      color:var(--muted);
+      font-size:18px;
+      max-width:60ch;
+    }
+
+    .hero-actions{
+      margin-top:24px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:12px 24px;
+      border-radius:999px;
+      font-weight:700;
+      background:var(--accent);
+      color:#fff;
+    }
+
+    .btn.secondary{
+      background:var(--surface);
+      color:var(--text);
+      border:1px solid var(--line);
+    }
+
+    .hero-image{
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:var(--surface);
+    }
 
     section{padding:48px 0}
     h2{margin:0 0 24px;font-size:28px}
+
+    /* ===== ARTIKEL INDEX ===== */
+    .filter{
+      display:flex;
+      gap:10px;
+      margin-bottom:24px;
+      flex-wrap:wrap;
+    }
+    .filter button{
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-weight:600;
+      cursor:pointer;
+    }
 
     .cards{
       display:grid;
@@ -82,19 +166,11 @@
       text-transform:uppercase;
     }
 
-    .filter{
-      display:flex;
-      gap:10px;
-      margin-bottom:24px;
-      flex-wrap:wrap;
-    }
-    .filter button{
-      padding:8px 14px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:#fff;
-      cursor:pointer;
-      font-weight:600;
+    footer{
+      border-top:1px solid var(--line);
+      background:var(--surface);
+      padding:40px 0;
+      margin-top:60px;
     }
   </style>
 </head>
@@ -103,25 +179,59 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="/">Hepiasik.com</a>
+    <a href="/" class="brand">Hepiasik.com</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
 <main class="wrap">
 
-<section>
-  <h2>Artikel Terbaru</h2>
+  <!-- ===== HERO TETAP ===== -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hiburan Ringan & Bacaan Cepat untuk Waktu Luang</h1>
+      <p>
+        Hepiasik menyajikan artikel hiburan ringan dan bacaan cepat yang ditulis secara orisinal,
+        tanpa clickbait, dan nyaman dibaca di perangkat apa pun.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="/kenapa-konten-hiburan-ringan-paling-dicari.html">Mulai Membaca</a>
+        <a class="btn secondary" href="/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
 
-  <div class="filter">
-    <button onclick="filter('all')">Semua</button>
-    <button onclick="filter('hiburan')">Hiburan</button>
-    <button onclick="filter('viral')">Viral</button>
-  </div>
+    <div class="hero-image">
+      <img src="/assets/hero/hiburan-ringan.png" alt="Ilustrasi hiburan ringan">
+    </div>
+  </section>
 
-  <div class="cards" id="articleList"></div>
-</section>
+  <!-- ===== ARTIKEL ===== -->
+  <section id="artikel">
+    <h2>Artikel Terbaru</h2>
+
+    <div class="filter">
+      <button onclick="filter('all')">Semua</button>
+      <button onclick="filter('hiburan')">Hiburan</button>
+      <button onclick="filter('viral')">Viral</button>
+    </div>
+
+    <div class="cards" id="articleList"></div>
+  </section>
 
 </main>
+
+<footer>
+  <div class="wrap">
+    <strong>Hepiasik.com</strong>
+    <p style="color:var(--muted);font-size:14px">
+      Portal hiburan ringan dan bacaan cepat berbahasa Indonesia.
+    </p>
+  </div>
+</footer>
 
 <script>
 const articles = [
