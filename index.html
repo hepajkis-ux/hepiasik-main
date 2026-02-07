@@ -5,143 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Hepiasik.com — Hiburan Ringan & Bacaan Cepat</title>
-  <meta name="description" content="Hepiasik.com menyajikan hiburan ringan dan bacaan cepat yang ditulis secara orisinal, nyaman dibaca, dan ramah pengguna.">
-  <meta name="monetag" content="c71ea274cd5bcfeea548b9fffb5f385f">
+  <meta name="description" content="Hepiasik.com menyajikan hiburan ringan dan bacaan cepat yang ditulis secara orisinal.">
   <link rel="canonical" href="https://hepiasik.com/">
   <meta name="robots" content="index,follow">
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3425219309754422"
-     crossorigin="anonymous"></script>
-  
-  
   <style>
     :root{
       --bg:#ffffff;
       --surface:#f6f7f9;
       --text:#1f2937;
       --muted:#6b7280;
-      --brand:#111827;
       --accent:#2563eb;
       --line:#e5e7eb;
       --radius:16px;
       --max:1100px;
     }
-
     *{box-sizing:border-box}
-    
-    /* Perbaikan: Tambahkan smooth scroll untuk pengalaman pengguna yang lebih baik */
-    html { scroll-behavior: smooth; }
-
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       background:var(--bg);
       color:var(--text);
       line-height:1.65;
-      -webkit-font-smoothing: antialiased; /* Perbaikan: Font lebih tajam di Mac/iOS */
     }
-
-    a{text-decoration:none; color:inherit; transition: 0.2s; /* Tambahkan transisi halus */}
-    img{max-width:100%; height:auto; display:block; border-radius: var(--radius);} /* Tambahkan height auto agar rasio gambar terjaga */
-
-    .wrap{max-width:var(--max); margin:auto; padding:0 20px} /* Perbaikan: Padding samping saja agar konsisten */
+    img{max-width:100%;display:block;border-radius:var(--radius)}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:var(--max);margin:auto;padding:0 20px}
 
     header{
       border-bottom:1px solid var(--line);
-      background: rgba(255, 255, 255, 0.8); /* Perbaikan: Transparansi dikit agar modern */
-      backdrop-filter: blur(8px); /* Efek blur di belakang header */
       position:sticky;
       top:0;
-      z-index:100;
+      background:#fff;
+      z-index:10;
     }
-
     .nav{
+      height:64px;
       display:flex;
-      align-items:center;
       justify-content:space-between;
-      gap:12px;
-      height: 70px; /* Konsistensi tinggi header */
+      align-items:center;
     }
+    .brand{font-weight:900;font-size:22px}
 
-    .brand{
-      font-weight:900;
-      font-size:22px; /* Sedikit lebih besar */
-      letter-spacing: -0.5px;
-    }
-
-    nav a{
-      margin-left: 15px; /* Spasi antar link */
-      font-weight:600;
-      color:var(--muted);
-    }
-
-    nav a:hover{color:var(--accent)} /* Perbaikan: Gunakan warna accent saat hover */
-
-    .hero{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:40px; /* Spasi lebih lebar agar lega */
-      padding:60px 0;
-    }
-
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr; padding:30px 0; text-align: center;}
-      .hero-actions{justify-content: center;}
-    }
-
-    .hero-text h1{
-      font-size: clamp(32px, 5vw, 48px); /* Responsif otomatis */
-      line-height: 1.1;
-      margin:0 0 20px;
-      color: var(--brand);
-    }
-
-    .hero-text p{
-      color:var(--muted);
-      font-size: 18px;
-      max-width:60ch;
-    }
-
-    .hero-actions{
-      margin-top:24px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      padding:12px 24px;
-      border-radius:999px;
-      font-weight:700;
-      background:var(--accent);
-      color:#fff;
-      display: inline-block;
-    }
-
-    .btn.secondary{
-      background:var(--surface);
-      color:var(--text);
-      border: 1px solid var(--line);
-    }
-
-    .btn:hover { opacity: 0.9; transform: translateY(-2px); }
-
-    .hero-image{
-      border-radius:var(--radius);
-      overflow:hidden;
-      background:var(--surface);
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); /* Tambahkan bayangan agar gambar menonjol */
-    }
-
-    section{padding:40px 0}
-    h2{margin:0 0 20px; font-size: 28px;}
+    section{padding:48px 0}
+    h2{margin:0 0 24px;font-size:28px}
 
     .cards{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:24px;
     }
-
     @media(max-width:900px){
       .cards{grid-template-columns:1fr}
     }
@@ -149,158 +62,100 @@
     .card{
       border:1px solid var(--line);
       border-radius:var(--radius);
-      padding:24px;
+      padding:20px;
       background:#fff;
-      display: flex;
-      flex-direction: column;
-      transition: 0.3s;
+      transition:.2s;
     }
+    .card:hover{transform:translateY(-4px)}
 
-    .card:hover { border-color: var(--accent); transform: translateY(-5px); }
-
-    .card h3{margin:0 0 10px; font-size: 20px; line-height: 1.4;}
+    .card img{
+      height:180px;
+      object-fit:cover;
+      margin-bottom:14px;
+    }
 
     .meta{
       font-size:12px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 700;
-      color:var(--accent); /* Warna accent untuk kategori */
-      margin-bottom:10px;
+      font-weight:700;
+      color:var(--accent);
+      margin-bottom:6px;
+      text-transform:uppercase;
     }
 
-    footer{
-      border-top:1px solid var(--line);
-      background:var(--surface);
-      margin-top:60px;
-      padding: 40px 0;
+    .filter{
+      display:flex;
+      gap:10px;
+      margin-bottom:24px;
+      flex-wrap:wrap;
     }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1.5fr 1fr;
-      gap:40px;
+    .filter button{
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#fff;
+      cursor:pointer;
+      font-weight:600;
     }
-
-    @media(max-width:800px){
-      .footer-grid{grid-template-columns:1fr; text-align: center;}
-    }
-
-    .footer-links{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: flex-end;
-    }
-
-    @media(max-width:800px){ .footer-links{ justify-content: center; } }
-
-    .footer-links a{
-      font-size:14px;
-      color:var(--muted);
-    }
-    .footer-links a:hover{ color: var(--accent); }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Hepiasik.com",
-    "url": "https://hepiasik.com/",
-    "inLanguage": "id-ID",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://hepiasik.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
 </head>
 
 <body>
 
 <header>
   <div class="wrap nav">
-    <a href="/" class="brand">Hepiasik.com</a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
+    <a class="brand" href="/">Hepiasik.com</a>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Hiburan Ringan & Bacaan Cepat untuk Waktu Luang</h1>
-      <p>
-        Hepiasik menyajikan artikel hiburan ringan dan bacaan cepat yang ditulis secara orisinal,
-        tanpa clickbait, dan nyaman dibaca di perangkat apa pun.
-      </p>
+<section>
+  <h2>Artikel Terbaru</h2>
 
-      <div class="hero-actions">
-        <a class="btn" href="/kenapa-konten-hiburan-ringan-paling-dicari.html">Mulai Membaca</a>
-        <a class="btn secondary" href="/privacy-policy.html">Privacy Policy</a>
-      </div>
-    </div>
+  <div class="filter">
+    <button onclick="filter('all')">Semua</button>
+    <button onclick="filter('hiburan')">Hiburan</button>
+    <button onclick="filter('viral')">Viral</button>
+  </div>
 
-    <div class="hero-image">
-      <img src="/assets/hero/hiburan-ringan.png" alt="Ilustrasi hiburan ringan dan bacaan santai" width="600" height="400" loading="eager">
-    </div>
-  </section>
-
-  <section id="artikel">
-    <h2>Artikel Pilihan</h2>
-    <div class="cards">
-      <article class="card">
-        <div class="meta">Hiburan • 7 menit baca</div>
-        <h3><a href="/kenapa-konten-hiburan-ringan-paling-dicari.html">Kenapa Konten Hiburan Ringan Paling Dicari</a></h3>
-        <p>Penjelasan kenapa bacaan ringan makin disukai di era digital.</p>
-      </article>
-
-      <article class="card">
-        <div class="meta">Viral • 5 menit baca</div>
-        <h3><a href="/alasan-konten-viral-cepat-menyebar-di-internet.html">Alasan Konten Viral Cepat Menyebar</a></h3>
-        <p>Pola sederhana yang sering muncul pada konten viral.</p>
-      </article>
-
-      <article class="card">
-        <div class="meta">Lifestyle • 4 menit baca</div>
-        <h3><a href="/kenapa-bacaan-ringan-lebih-nyaman-dibaca-di-era-digital.html">Bacaan Ringan di Era Digital</a></h3>
-        <p>Kenapa konten ringkas lebih nyaman dibaca lewat ponsel.</p>
-      </article>
-    </div>
-  </section>
+  <div class="cards" id="articleList"></div>
+</section>
 
 </main>
 
-<footer>
-  <div class="wrap footer-grid">
-    <div>
-      <strong style="font-size:18px">Hepiasik.com</strong>
-      <p style="color:var(--muted); font-size:14px; margin: 10px 0;">
-        Portal hiburan ringan dan bacaan cepat berbahasa Indonesia.
-      </p>
-      <p style="font-size:12px;color:var(--muted)">
-        © <span id="y"></span> Hepiasik.com. All rights reserved.
-      </p>
-    </div>
-
-    <div class="footer-links">
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/disclaimer.html">Disclaimer</a>
-      <a href="/terms.html">Terms</a>
-    </div>
-  </div>
-</footer>
-
 <script>
-  document.getElementById("y").textContent = new Date().getFullYear();
+const articles = [
+  {
+    title:"Kenapa Konten Hiburan Ringan Justru Paling Dicari",
+    url:"/kenapa-konten-hiburan-ringan-paling-dicari.html",
+    thumb:"/assets/thumbnails/hiburan-ringan.jpg",
+    category:"hiburan",
+    read:"7 menit baca",
+    desc:"Analisis mendalam kenapa konten hiburan ringan menjadi stress relief utama di era digital."
+  }
+];
+
+const list = document.getElementById("articleList");
+
+articles.forEach(a=>{
+  list.innerHTML += `
+    <article class="card" data-category="${a.category}">
+      <img src="${a.thumb}" alt="${a.title}">
+      <div class="meta">${a.category} • ${a.read}</div>
+      <h3><a href="${a.url}">${a.title}</a></h3>
+      <p>${a.desc}</p>
+    </article>
+  `;
+});
+
+function filter(cat){
+  document.querySelectorAll(".card").forEach(c=>{
+    c.style.display =
+      cat==="all" || c.dataset.category===cat
+      ? "block"
+      : "none";
+  });
+}
 </script>
 
 </body>
