@@ -1,156 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strategi Navigasi Konten 2026: Karir, Video, dan Curhat di Hepiasik.com</title>
-  <meta name="description" content="Panduan menyusun strategi konten untuk kategori Karir, Video, dan Curhat di tahun 2026 guna meningkatkan engagement dan otoritas website Hepiasik.com.">
-  <link rel="canonical" href="https://hepiasik.com/strategi-konten-2026">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hepiasik.com — Hiburan Ringan, Psikologi & Karir Asik</title>
+  <meta name="description" content="Portal hiburan ringan, tips psikologi, video tren 2026, dan tips karir. Bacaan cepat, orisinal, dan berkualitas.">
+  <meta name="monetag" content="c71ea274cd5bcfeea548b9fffb5f385f">
+  <link rel="canonical" href="https://hepiasik.com/">
+  <meta name="robots" content="index,follow">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3425219309754422" crossorigin="anonymous"></script>
+  
   <style>
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #ffffff;
-  color: #1f2937;
-  line-height: 1.75;
-}
-main {
-  max-width: 760px;
-  margin: auto;
-  padding: 24px 18px 40px;
-}
-article h1 {
-  font-size: 32px;
-  line-height: 1.25;
-  margin: 0 0 16px;
-  color: #111827;
-}
-article h2 {
-  font-size: 22px;
-  margin: 32px 0 10px;
-  color: #111827;
-}
-article p {
-  margin: 0 0 18px;
-  font-size: 17px;
-}
-blockquote {
-  border-left: 5px solid #e5e7eb;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  font-style: italic;
-  color: #4b5563;
-}
-figure { margin: 24px 0; }
-figcaption { font-size: 14px; color: #6b7280; text-align: center; margin-top: 8px; }
-img { border-radius: 8px; width: 100%; height: auto; }
-a { color: #2563eb; text-decoration: none; }
-footer.note {
-  margin-top: 40px;
-  padding-top: 16px;
-  border-top: 1px solid #e5e7eb;
-  font-size: 14px;
-  color: #6b7280;
-}
-</style>
+    :root{
+      --bg:#ffffff; --surf:#f6f7f9; --text:#1f2937; --muted:#6b7280;
+      --brand:#111827; --accent:#2563eb; --line:#e5e7eb; --radius:16px; --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html { scroll-behavior: smooth; }
+    body{ margin:0; font-family: system-ui, -apple-system, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing: antialiased; }
+    a{text-decoration:none; color:inherit; transition: 0.2s;}
+    img{max-width:100%; height:auto; display:block; border-radius: var(--radius);}
+    .wrap{max-width:var(--max); margin:auto; padding:0 20px}
+
+    /* Navbar Mobile-Friendly Fix */
+    header{ border-bottom:1px solid var(--line); background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position:sticky; top:0; z-index:100; }
+    .nav{ display:flex; align-items:center; justify-content:space-between; height: 70px; }
+    .brand{ font-weight:900; font-size:22px; letter-spacing: -0.5px; }
+    nav{ display: flex; gap: 15px; }
+    nav a{ font-weight:600; color:var(--muted); font-size: 14px; }
+    nav a:hover{ color:var(--accent); }
+
+    @media(max-width:650px){
+      .nav { height: auto; padding: 15px 0; flex-direction: column; gap: 10px; }
+      nav { gap: 10px; flex-wrap: wrap; justify-content: center; }
+    }
+
+    /* Hero Optimization */
+    .hero{ display:grid; grid-template-columns:1.2fr .8fr; gap:40px; padding:60px 0; align-items: center; }
+    @media(max-width:900px){ .hero{grid-template-columns:1fr; text-align: center;} .hero-actions{justify-content: center;} }
+    .hero-text h1{ font-size: clamp(30px, 5vw, 48px); line-height: 1.1; margin:0 0 20px; color: var(--brand); }
+    .btn{ padding:12px 24px; border-radius:999px; font-weight:700; background:var(--accent); color:#fff; display: inline-block; }
+    .btn.secondary{ background:var(--surf); color:var(--text); border: 1px solid var(--line); }
+
+    section{padding:40px 0}
+    h2{margin:0 0 30px; font-size: 28px; border-left: 5px solid var(--accent); padding-left: 15px;}
+
+    /* Kategori Hirarki */
+    .cat-list { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; justify-content: center; }
+    .cat-item { padding: 10px 20px; background: var(--surf); border-radius: 50px; font-weight: bold; font-size: 14px; border: 1px solid var(--line); }
+    .cat-item:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Grid Artikel */
+    .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:25px; }
+    .card{ border:1px solid var(--line); border-radius:var(--radius); padding:25px; background:#fff; transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
+    .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .tag{ font-size:11px; text-transform: uppercase; font-weight: 800; color:var(--accent); margin-bottom:10px; letter-spacing: 0.5px; }
+
+    footer{ border-top:1px solid var(--line); background:var(--surf); margin-top:60px; padding: 40px 0; text-align: center; }
+    .footer-links{ display: flex; justify-content: center; gap: 20px; margin-top: 15px; flex-wrap: wrap; }
+  </style>
 </head>
+
 <body>
-  <main>
-    <article>
-      <h1>Strategi Navigasi Konten 2026: Karir, Video, dan Curhat di Hepiasik.com</h1>
 
-      <p>Memasuki Februari 2026, dinamika konsumsi konten digital telah bergeser dari sekadar pencarian informasi menuju pencarian relevansi emosional dan efisiensi waktu. Bagi platform seperti Hepiasik.com, pengembangan struktur navigasi yang mencakup sektor karir, konten audio-visual (video), dan ruang ekspresi personal (curhat) bukan sekadar pelengkap teknis, melainkan fondasi ekosistem digital yang sehat. Strategi ini memerlukan sinkronisasi antara kebutuhan psikologis pengguna dan optimasi mesin pencari agar setiap artikel yang diterbitkan mampu menjangkau audiens yang tepat dengan dampak yang maksimal.</p>
+<header>
+  <div class="wrap nav">
+    <a href="/" class="brand">Hepiasik.com</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#viral">Viral</a>
+      <a href="#psikologi">Psikologi</a>
+      <a href="#video">Video</a>
+      <a href="#karir">Karir</a>
+    </nav>
+  </div>
+</header>
 
-      <p>Pengembangan kategori baru ini harus dipandang sebagai upaya membangun otoritas subjek (topical authority) yang konsisten. Dalam dunia pengembangan web dan manajemen konten, struktur tautan internal yang logis akan membantu mesin penjelajah (crawler) memahami hierarki informasi dengan lebih baik (Newport, Cal, Digital Minimalism, 2019). Dengan mempersiapkan slug dan focus keyphrase yang kuat sejak awal, kita sedang membangun fondasi bagi keberlanjutan traffic organik jangka panjang yang stabil dan berkualitas tinggi.</p>
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hiburan Ringan & Bacaan Cepat Februari 2026</h1>
+      <p>Portal bacaan asik tentang tren viral, psikologi harian, dan navigasi karir modern. Ditulis orisinal untuk Anda.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#viral">Baca Sekarang</a>
+        <a class="btn secondary" href="#kategori">Eksplor Kategori</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/hero/hiburan-ringan.png" alt="Ilustrasi Hepiasik" width="600" height="400" fetchpriority="high">
+    </div>
+  </section>
 
-      <h2>Optimalisasi Kategori Karir untuk Profesional Muda 2026</h2>
-      <p>Kategori karir di tahun 2026 tidak lagi hanya membahas tentang cara membuat resume, melainkan tentang adaptabilitas di tengah ekosistem kerja yang dipengaruhi oleh kecerdasan buatan dan model kerja hibrida. Strategi konten di sini harus fokus pada "Skill Resiliency" atau ketahanan keterampilan. Membangun karir yang sukses membutuhkan pemahaman mendalam tentang manajemen energi dan fokus mental (Schwartz, Tony, The Power of Full Engagement, 2003). Artikel-artikel di bawah kategori ini harus menawarkan solusi konkret bagi hambatan profesional harian.</p>
+  <section id="kategori">
+    <h2>Eksplor Kategori</h2>
+    <div class="cat-list">
+      <a href="#viral" class="cat-item">🔥 Viral</a>
+      <a href="#psikologi" class="cat-item">🧠 Psikologi</a>
+      <a href="#video" class="cat-item">🎥 Video</a>
+      <a href="#karir" class="cat-item">💼 Karir</a>
+      <a href="#curhat" class="cat-item">💬 Curhat</a>
+    </div>
+  </section>
 
-      <figure>
-        <img src="1/anak-muda-karir-fokus.jpg" alt="Anak muda produktif sedang merancang strategi karir di tahun 2026 dengan fokus tinggi">
-        <figcaption>hepiasik.com - Perencanaan karir yang matang di tahun 2026 membutuhkan integrasi antara teknologi dan keseimbangan hidup.</figcaption>
-      </figure>
+  <section id="viral">
+    <h2>🔥 Trending & Viral</h2>
+    <div class="grid">
+      <a href="/alasan-konten-viral-cepat-menyebar-di-internet.html" class="card">
+        <span class="tag">Viral</span>
+        <h3>Alasan Konten Viral Cepat Menyebar</h3>
+        <p>Analisis kenapa sebuah konten bisa viral mendadak di media sosial.</p>
+      </a>
+      <a href="/kenapa-konten-hiburan-ringan-paling-dicari.html" class="card">
+        <span class="tag">Hiburan</span>
+        <h3>Kenapa Hiburan Ringan Paling Dicari</h3>
+        <p>Kenapa artikel santai selalu menang dalam algoritma internet saat ini.</p>
+      </a>
+    </div>
+  </section>
 
-      <p>Slug yang disarankan harus singkat dan mengandung kata kunci abadi (evergreen). Misalnya, penggunaan slug seperti `/karir/strategi-adaptasi-ai-2026` atau `/karir/tips-negosiasi-gaji-remote` akan memberikan sinyal kuat kepada mesin pencari mengenai relevansi konten tersebut. Fokus pada pengembangan diri secara berkelanjutan adalah kunci utama yang harus ditekankan (Clear, James, Atomic Habits, 2018). Setiap konten karir harus diakhiri dengan langkah praktis yang bisa langsung diterapkan oleh pembaca untuk meningkatkan nilai profesional mereka.</p>
+  <section id="psikologi">
+    <h2>🧠 Psikologi & Produktivitas</h2>
+    <div class="grid">
+      <a href="/cara-menghadapi-rasa-malas-menjadi-produktif-tetap-asik.html" class="card">
+        <span class="tag">Psikologi</span>
+        <h3>Lawan Rasa Malas dengan Asik</h3>
+        <p>Trik psikologi sederhana agar tetap produktif tanpa beban berlebih.</p>
+      </a>
+      <a href="/mengisi-waktu-luang-dengan-cara-positif-dan-santai.html" class="card">
+        <span class="tag">Self Care</span>
+        <h3>Isi Waktu Luang secara Positif</h3>
+        <p>Cara mengelola kesehatan mental melalui aktivitas harian yang santai.</p>
+      </a>
+      <a href="/cara-mengatur-waktu-istirahat-digital-agar-hati-tenang.html" class="card">
+        <span class="tag">Curhat</span>
+        <h3>Seni Istirahat Digital (Digital Detox)</h3>
+        <p>Kenapa mematikan notifikasi adalah bentuk kasih sayang pada diri sendiri.</p>
+      </a>
+    </div>
+  </section>
 
-      <p>Insight penting: Kategori karir harus menjadi tempat pembaca menemukan harapan dan peta jalan yang jelas di tengah ketidakpastian ekonomi. Solusinya, buatlah konten yang menggabungkan data pasar kerja terkini dengan tips psikologi industri yang aplikatif.</p>
+  <section id="video">
+    <h2>🎥 Video & Karir Modern</h2>
+    <div class="grid">
+      <a href="/tren-video-pendek-2026-yang-bikin-cepat-terkenal.html" class="card">
+        <span class="tag">Video</span>
+        <h3>Tren Video Pendek Februari 2026</h3>
+        <p>Bocoran konten video yang bakal booming di TikTok dan Reels bulan ini.</p>
+      </a>
+      <a href="/tips-karir-hybrid-2026-tetap-produktif-tanpa-burnout.html" class="card">
+        <span class="tag">Karir</span>
+        <h3>Navigasi Karir Hybrid 2026</h3>
+        <p>Tips menyeimbangkan produktivitas kerja remote agar mental tetap sehat.</p>
+      </a>
+    </div>
+  </section>
+</main>
 
-      <h2>Integrasi Konten Video: Masa Depan Hiburan Visual yang Ringkas</h2>
-      <p>Video telah menjadi format konten paling dominan di tahun 2026, terutama video pendek dengan durasi di bawah 90 detik yang mampu menyampaikan pesan secara padat. Mengintegrasikan kategori video ke dalam Hepiasik.com memungkinkan platform untuk menangkap audiens yang memiliki rentang perhatian (attention span) yang lebih pendek namun menginginkan nilai informasi yang tinggi. Strategi ini sejalan dengan teori ekonomi perhatian yang menyatakan bahwa konten harus mampu memberikan "instant reward" bagi audiensnya (Lembke, Anna, Dopamine Nation, 2021).</p>
+<footer>
+  <div class="wrap">
+    <strong>Hepiasik.com</strong>
+    <p style="font-size:13px; color:var(--muted); margin: 10px 0;">Portal hiburan ringan dan tips inspiratif untuk waktu luang Anda.</p>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+    </div>
+    <p style="font-size:11px; margin-top:20px;">© 2026 Hepiasik.com. All rights reserved.</p>
+  </div>
+</footer>
 
-      <p>Dalam sisi teknis, slug untuk kategori video harus dioptimasi untuk penemuan visual, misalnya `/video/tutorial-relaksasi-3-menit` atau `/video/ulasan-gadget-produktivitas`. Penggunaan metadata yang kaya dan transkripsi teks yang dioptimasi SEO akan memastikan konten video tetap dapat dirayapi oleh mesin pencari teks (Newport, Cal, Deep Work, 2016). Video bukan hanya soal hiburan, melainkan instrumen edukasi visual yang memperkuat pesan dalam artikel tertulis. Hal ini menciptakan pengalaman multimedia yang utuh bagi pengunjung website.</p>
-
-      <p>Kesimpulannya, kategori video harus difungsikan sebagai jembatan visual yang menyederhanakan konsep-konsep rumit. Solusinya, mulailah dengan menyematkan video pendek yang merangkum poin-poin utama dari artikel panjang untuk meningkatkan durasi kunjungan (dwell time) pengguna pada halaman tersebut.</p>
-
-      <h2>Ruang Curhat: Validasi Emosional dan Kesehatan Mental</h2>
-      <p>Kategori "Curhat" mungkin terdengar santai, namun secara psikologis, ini adalah ruang vital bagi kesehatan mental audiens. Di tahun 2026, kesepian digital menjadi tantangan besar, dan menyediakan ruang untuk berbagi narasi personal dapat membangun komunitas yang loyal. Berbagi cerita adalah bentuk katarsis emosional yang telah diakui secara ilmiah dapat menurunkan tingkat stres (Goleman, Daniel, Emotional Intelligence, 1995). Artikel di kategori ini harus menggunakan gaya bahasa yang empatik dan inklusif.</p>
-
-      <figure>
-        <img src="1/diskusi-curhat-positif.jpg" alt="Anak muda aktif sedang berdiskusi secara positif dan terbuka di kategori curhat">
-        <figcaption>hepiasik.com - Ruang curhat yang sehat membantu membangun koneksi emosional antar pembaca di era digital.</figcaption>
-      </figure>
-
-      <p>Slug untuk kategori ini harus bersifat sangat manusiawi dan berbasis masalah, seperti `/curhat/menghadapi-quarter-life-crisis` atau `/curhat/cara-berdamai-dengan-kegagalan`. Narasi personal yang kuat memiliki daya tarik unik karena memberikan rasa "tidak sendirian" kepada pembaca (Waldinger, Robert, The Good Life, 2023). Kategori ini harus dikelola dengan kebijakan moderasi yang ketat untuk menjaga lingkungan tetap positif dan suportif. Keaslian (authenticity) adalah mata uang termahal dalam konten jenis ini di masa depan.</p>
-
-      <p>Insight bagi pengelola konten: Jangan hanya menyajikan masalah, tetapi arahkan setiap "curhat" menuju refleksi positif atau saran profesional yang ringan. Solusinya, integrasikan pendapat ahli dalam artikel curhat untuk memberikan nilai E-E-A-T yang lebih tinggi pada konten tersebut.</p>
-
-      <h2>Sinergi Antar Kategori: Membangun Ekosistem Hepiasik.com</h2>
-      <p>Keberhasilan kategori karir, video, dan curhat sangat bergantung pada bagaimana ketiganya saling terhubung (internal linking). Seorang pembaca yang mencari tips karir mungkin membutuhkan video tutorial manajemen waktu, dan setelah itu mungkin ingin membaca curhatan orang lain tentang burnout untuk merasa dipahami. Sinergi ini menciptakan jalur pengguna (user journey) yang melingkar dan mendalam (Kotler, Philip, Marketing 5.0, 2021). Strategi tautan internal harus direncanakan secara arsitektural untuk menjaga otoritas domain.</p>
-
-      <p>Setiap subbab dalam artikel-artikel masa depan harus dirancang untuk memicu rasa ingin tahu pembaca terhadap kategori lainnya. Hal ini didasarkan pada prinsip psikologi tentang rasa ingin tahu yang berkelanjutan (Csikszentmihalyi, Mihaly, Flow, 1990). Penggunaan anchor text yang natural dan deskriptif dalam slug akan memudahkan pengguna untuk menavigasi website tanpa merasa dipaksa. Tahun 2026 adalah tahun di mana pengalaman pengguna (UX) dan kualitas konten harus berjalan beriringan tanpa kompromi.</p>
-
-      <p>Penting untuk diingat bahwa setiap tautan yang dibuat adalah janji nilai kepada pembaca. Solusinya, pastikan setiap kategori baru memiliki setidaknya lima artikel pilar (pillar content) sebelum diluncurkan secara publik untuk memberikan kedalaman informasi yang cukup sejak hari pertama.</p>
-
-      <h2>Optimasi SEO dan Slug di Februari 2026</h2>
-      <p>Pada Februari 2026, mesin pencari semakin cerdas dalam memahami niat (intent) pengguna dibandingkan sekadar kata kunci mentah. Slug harus mencerminkan solusi dari masalah yang dicari. Penggunaan kata kerja dalam slug seperti `/karir/membangun-personal-branding` jauh lebih efektif daripada slug statis (Duckworth, Angela, Grit, 2016). Selain itu, kecepatan muat halaman dan keramahan seluler tetap menjadi faktor peringkat utama yang tidak boleh diabaikan dalam pengembangan teknis kategori-kategori ini.</p>
-
-      <p>Penelitian dari American Psychological Association (APA, 2024) menunjukkan bahwa pengguna lebih cenderung mempercayai situs yang memiliki struktur yang rapi dan profesional. Oleh karena itu, penggunaan subjudul yang jelas (H2, H3) dan paragraf yang berbobot informasi sangat krusial untuk mempertahankan kredibilitas (Sinek, Simon, Start with Why, 2009). Strategi SEO di tahun 2026 adalah tentang membangun kepercayaan melalui konten yang benar-benar membantu manusia, bukan sekadar memuaskan mesin.</p>
-
-      <p>Insight kesimpulan: Slug yang bersih adalah cerminan dari manajemen data yang profesional. Solusinya, lakukan audit slug secara berkala untuk memastikan tidak ada redundansi dan setiap tautan tetap relevan dengan tren pencarian terbaru di bulan Februari ini.</p>
-
-      <h2>Strategi Konten Berkelanjutan dan Adaptasi Tren</h2>
-      <p>Dunia digital bergerak sangat cepat, dan apa yang relevan hari ini mungkin akan usang dalam beberapa bulan. Oleh karena itu, kategori karir, video, dan curhat harus bersifat dinamis. Mengikuti tren tanpa kehilangan jati diri adalah tantangan utama bagi setiap kreator konten (Godin, Seth, This is Marketing, 2018). Hepiasik.com harus konsisten pada misinya untuk memberikan hiburan yang positif dan santai meskipun membahas topik yang serius seperti karir.</p>
-
-      <p>Penggunaan data analitik untuk melihat artikel mana yang paling banyak dibaca dan kategori mana yang memiliki bounce rate terendah sangatlah penting. Data ini akan menjadi kompas dalam menentukan arah pengembangan konten selanjutnya (Duhigg, Charles, The Power of Habit, 2012). Adaptasi bukan berarti mengubah segalanya, melainkan menyempurnakan apa yang sudah berjalan dengan baik. Fleksibilitas dalam menyusun strategi adalah kunci untuk bertahan di industri media digital yang kompetitif di tahun 2026.</p>
-
-      <p>Sebagai langkah akhir, setiap konten yang diproduksi harus memiliki tujuan yang jelas: untuk menginspirasi, mengedukasi, atau menghibur. Solusinya, buatlah kalender konten bulanan yang menyeimbangkan antara topik evergreen dan topik tren agar traffic website tetap stabil sepanjang tahun.</p>
-
-      <h2>Artikel Terkait</h2>
-      <ul>
-        <li><a href="https://hepiasik.com/panduan-seo-2026">Panduan Lengkap SEO dan Struktur Website Tahun 2026</a></li>
-        <li><a href="https://hepiasik.com/cara-membuat-slug-ramah-seo">Cara Membuat Slug yang Ramah SEO dan Mudah Diingat</a></li>
-        <li><a href="https://hepiasik.com/manajemen-konten-hepiasik">Sistem Manajemen Konten untuk Efisiensi Penulisan Artikel</a></li>
-        <li><a href="https://hepiasik.com/tips-karir-milenial-2026">Tips Karir bagi Milenial dan Gen Z di Era Kerja Hibrida</a></li>
-      </ul>
-
-      <footer class="note">
-        <h3>Daftar Buku yang Digunakan:</h3>
-        <ul>
-          <li>Newport, Cal. Digital Minimalism: Choosing a Focused Life in a Noisy World. 2019.</li>
-          <li>Schwartz, Tony. The Power of Full Engagement. 2003.</li>
-          <li>Clear, James. Atomic Habits. 2018.</li>
-          <li>Lembke, Anna. Dopamine Nation: Finding Balance in the Age of Indulgence. 2021.</li>
-          <li>Newport, Cal. Deep Work: Rules for Focused Success in a Distracted World. 2016.</li>
-          <li>Goleman, Daniel. Emotional Intelligence. 1995.</li>
-          <li>Waldinger, Robert & Schulz, Marc. The Good Life. 2023.</li>
-          <li>Kotler, Philip. Marketing 5.0: Technology for Humanity. 2021.</li>
-          <li>Csikszentmihalyi, Mihaly. Flow: The Psychology of Optimal Experience. 1990.</li>
-          <li>Duckworth, Angela. Grit: The Power of Passion and Perseverance. 2016.</li>
-          <li>Sinek, Simon. Start with Why. 2009.</li>
-          <li>Godin, Seth. This is Marketing. 2018.</li>
-          <li>Duhigg, Charles. The Power of Habit. 2012.</li>
-        </ul>
-
-        <h3>Daftar Website yang Digunakan:</h3>
-        <ul>
-          <li>American Psychological Association (apa.org)</li>
-          <li>Harvard Business Review - Future of Work (hbr.org)</li>
-          <li>Search Engine Journal - SEO Trends 2026 (searchenginejournal.com)</li>
-          <li>Reuters Institute - Digital News Report (reutersinstitute.politics.ox.ac.uk)</li>
-          <li>Pew Research Center - Internet & Technology (pewresearch.org)</li>
-        </ul>
-      </footer>
-    </article>
-  </main>
 </body>
 </html>
