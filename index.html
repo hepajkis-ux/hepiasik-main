@@ -4,67 +4,53 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hepiasik.com — Hiburan Ringan & Bacaan Cepat</title>
-  <meta name="description" content="Hepiasik.com menyajikan hiburan ringan, tips psikologi, karir, dan bacaan cepat yang ditulis secara orisinal.">
-  <meta name="monetag" content="c71ea274cd5bcfeea548b9fffb5f385f">
+  <meta name="description" content="Hepiasik.com menyajikan hiburan ringan, tips psikologi, dan konten viral orisinal.">
   <link rel="canonical" href="https://hepiasik.com/">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="index, follow">
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3425219309754422" crossorigin="anonymous"></script>
-  
+
   <style>
-    :root{
-      --bg:#ffffff; --surface:#f6f7f9; --text:#1f2937; --muted:#6b7280;
-      --brand:#111827; --accent:#2563eb; --line:#e5e7eb; --radius:16px; --max:1100px;
-    }
+    :root{ --bg:#ffffff; --surf:#f6f7f9; --txt:#1f2937; --mut:#6b7280; --acc:#2563eb; --line:#e5e7eb; --rad:16px; }
     *{box-sizing:border-box}
-    html { scroll-behavior: smooth; }
-    body{ margin:0; font-family: system-ui, -apple-system, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing: antialiased; }
-    a{text-decoration:none; color:inherit; transition: 0.2s;}
-    img{max-width:100%; height:auto; display:block; border-radius: var(--radius);}
-    .wrap{max-width:var(--max); margin:auto; padding:0 20px}
-
-    header{ border-bottom:1px solid var(--line); background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); position:sticky; top:0; z-index:100; }
+    body{ margin:0; font-family: system-ui, -apple-system, sans-serif; background:var(--bg); color:var(--txt); line-height:1.5; }
+    .wrap{ max-width:1100px; margin:auto; padding:0 20px; }
     
-    /* Perbaikan Menu Mobile */
-    .nav{ display:flex; align-items:center; justify-content:space-between; height: 70px; }
-    .brand{ font-weight:900; font-size:20px; letter-spacing: -0.5px; flex-shrink: 0; }
-    nav{ display: flex; gap: 10px; }
-    nav a{ font-weight:600; color:var(--muted); font-size: 14px; padding: 5px 8px; border-radius: 8px; }
-    nav a:hover{ color:var(--accent); background: var(--surface); }
+    /* Header & Navigasi Mobile-Friendly */
+    header{ border-bottom:1px solid var(--line); position:sticky; top:0; background:rgba(255,255,255,0.9); backdrop-filter:blur(10px); z-index:100; }
+    .nav{ display:flex; align-items:center; justify-content:space-between; height:65px; }
+    .brand{ font-weight:900; font-size:1.4rem; color:#111827; }
+    nav{ display:flex; gap:15px; }
+    nav a{ font-weight:600; color:var(--mut); font-size:0.9rem; }
+    nav a:hover{ color:var(--acc); }
 
-    @media(max-width:480px){
-      .nav { height: auto; padding: 15px 0; flex-direction: column; gap: 10px; }
-      nav { width: 100%; justify-content: center; border-top: 1px solid var(--line); padding-top: 10px; }
+    /* Fix Menu Mobile */
+    @media(max-width:600px){
+      .nav{ flex-direction:column; height:auto; padding:10px 0; }
+      nav{ margin-top:10px; gap:20px; }
     }
 
-    .hero{ display:grid; grid-template-columns:1.2fr .8fr; gap:30px; padding:40px 0; align-items: center; }
-    @media(max-width:900px){ .hero{grid-template-columns:1fr; text-align: center;} .hero-actions{justify-content: center;} }
-    .hero-text h1{ font-size: clamp(28px, 5vw, 42px); line-height: 1.1; margin:0 0 15px; color: var(--brand); }
-    .hero-text p{ color:var(--muted); font-size: 16px; margin-bottom: 25px; }
-    .hero-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+    /* Hero Section Optimasi */
+    .hero{ display:grid; grid-template-columns:1fr 1fr; gap:30px; padding:40px 0; align-items:center; }
+    @media(max-width:900px){ .hero{ grid-template-columns:1fr; text-align:center; } }
+    .hero h1{ font-size:clamp(1.8rem, 5vw, 2.8rem); line-height:1.2; margin:0 0 15px; color:#111827; }
+    .btn{ padding:12px 24px; border-radius:50px; font-weight:700; background:var(--acc); color:#fff; display:inline-block; border:none; text-decoration:none; }
+    
+    /* Image Optimization Container */
+    .hero-img img{ width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; background:#eee; }
 
-    .btn{ padding:12px 24px; border-radius:999px; font-weight:700; background:var(--accent); color:#fff; display: inline-block; font-size: 15px; }
-    .btn.secondary{ background:var(--surface); color:var(--text); border: 1px solid var(--line); }
+    /* Grid Artikel */
+    section{ padding:40px 0; }
+    h2{ font-size:1.6rem; margin-bottom:25px; border-left:4px solid var(--acc); padding-left:15px; }
+    .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:20px; }
+    .card{ border:1px solid var(--line); border-radius:var(--rad); padding:20px; transition:0.3s; text-decoration:none; color:inherit; height:100%; display:block; }
+    .card:hover{ border-color:var(--acc); transform:translateY(-3px); }
+    .card h3{ margin:0 0 10px; font-size:1.2rem; }
+    .tag{ font-size:0.7rem; font-weight:700; color:var(--acc); text-transform:uppercase; margin-bottom:8px; display:block; }
 
-    section{padding:30px 0}
-    h2{margin:0 0 25px; font-size: 24px; border-left: 4px solid var(--accent); padding-left: 12px;}
-
-    /* Kategori Chips */
-    .cat-list { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 30px; }
-    .cat-chip { padding: 8px 16px; background: var(--surface); border-radius: 50px; font-weight: bold; font-size: 13px; border: 1px solid var(--line); }
-
-    .cards{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:20px; }
-    @media(max-width:600px){ .cards{grid-template-columns:1fr} }
-    .card{ border:1px solid var(--line); border-radius:var(--radius); padding:20px; background:#fff; transition: 0.3s; display: flex; flex-direction: column; }
-    .card:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .card h3{margin:0 0 10px; font-size: 18px; line-height: 1.4;}
-    .meta{ font-size:10px; text-transform: uppercase; font-weight: 700; color:var(--accent); margin-bottom:8px; }
-
-    footer{ border-top:1px solid var(--line); background:var(--surface); margin-top:40px; padding: 30px 0; text-align: center;}
-    .footer-links{ display: flex; justify-content: center; gap: 15px; margin-top: 15px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+    footer{ background:var(--surf); padding:30px 0; text-align:center; border-top:1px solid var(--line); font-size:0.8rem; color:var(--mut); }
   </style>
 </head>
-
 <body>
 
 <header>
@@ -81,83 +67,52 @@
 
 <main class="wrap">
   <section class="hero">
-    <div class="hero-text">
+    <div>
       <h1>Hiburan Ringan & Tips Hidup Lebih Asik</h1>
-      <p>Bacaan cepat untuk mengisi waktu luang Anda. Mulai dari tips psikologi, karir, hingga konten viral orisinal.</p>
-      <div class="hero-actions">
-        <a class="btn" href="#viral">Mulai Membaca</a>
-        <a class="btn secondary" href="#kategori">Kategori</a>
-      </div>
+      <p>Bacaan cepat untuk mengisi waktu luang Anda tanpa ribet.</p>
+      <a href="#viral" class="btn">Mulai Membaca</a>
     </div>
-    <div class="hero-image">
+    <div class="hero-img">
       <img src="/assets/hero/hiburan-ringan.png" alt="Ilustrasi Santai" width="600" height="400" fetchpriority="high">
-    </div>
-  </section>
-
-  <section id="kategori">
-    <h2>Eksplor Kategori</h2>
-    <div class="cat-list">
-      <a href="#viral" class="cat-chip">🔥 Viral</a>
-      <a href="#psikologi" class="cat-chip">🧠 Psikologi</a>
-      <a href="#video" class="cat-chip">🎥 Video</a>
-      <a href="#curhat" class="cat-chip">💬 Curhat</a>
-      <a href="#karir" class="cat-chip">💼 Karir</a>
     </div>
   </section>
 
   <section id="viral">
     <h2>Trending & Viral</h2>
-    <div class="cards">
-      <article class="card">
-        <div class="meta">Viral • Trending</div>
-        <h3><a href="/alasan-konten-viral-cepat-menyebar-di-internet.html">Alasan Konten Viral Cepat Menyebar</a></h3>
-        <p>Analisis kenapa sebuah konten bisa viral mendadak di internet.</p>
-      </article>
-      <article class="card">
-        <div class="meta">Viral • Hiburan</div>
-        <h3><a href="/kenapa-konten-hiburan-ringan-paling-dicari.html">Hiburan Ringan Paling Dicari</a></h3>
-        <p>Alasan kenapa konten santai selalu menang di era digital.</p>
-      </article>
-      <article class="card">
-        <div class="meta">Digital • Mobile</div>
-        <h3><a href="/kenapa-bacaan-ringan-lebih-nyaman-dibaca-di-era-digital.html">Bacaan Era Digital</a></h3>
-        <p>Kenapa artikel pendek lebih disukai pembaca ponsel.</p>
-      </article>
+    <div class="grid">
+      <a href="/alasan-konten-viral-cepat-menyebar-di-internet.html" class="card">
+        <span class="tag">Viral</span>
+        <h3>Alasan Konten Viral Cepat Menyebar</h3>
+        <p>Bedah rahasia kenapa sebuah konten bisa viral mendadak.</p>
+      </a>
+      <a href="/kenapa-konten-hiburan-ringan-paling-dicari.html" class="card">
+        <span class="tag">Hiburan</span>
+        <h3>Kenapa Hiburan Ringan Paling Dicari</h3>
+        <p>Analisis kenapa orang lebih suka bacaan santai saat ini.</p>
+      </a>
     </div>
   </section>
 
   <section id="psikologi">
     <h2>Psikologi & Produktivitas</h2>
-    <div class="cards">
-      <article class="card">
-        <div class="meta">Psikologi • Karir</div>
-        <h3><a href="/cara-menghadapi-rasa-malas-menjadi-produktif-tetap-asik.html">Cara Menghadapi Rasa Malas</a></h3>
-        <p>Trik tetap produktif dengan cara yang santai dan asik.</p>
-      </article>
-      <article class="card">
-        <div class="meta">Self Care • Lifestyle</div>
-        <h3><a href="/hiburan-sederhana-yang-bikin-waktu-luang-lebih-menyenangkan.html">Hiburan Sederhana</a></h3>
-        <p>Ide aktivitas kecil untuk mengisi waktu istirahat Anda.</p>
-      </article>
-      <article class="card">
-        <div class="meta">Psikologi • Santai</div>
-        <h3><a href="/mengisi-waktu-luang-dengan-cara-positif-dan-santai.html">Isi Waktu Luang</a></h3>
-        <p>Menjaga kesehatan mental dengan aktivitas positif harian.</p>
-      </article>
+    <div class="grid">
+      <a href="/cara-menghadapi-rasa-malas-menjadi-produktif-tetap-asik.html" class="card">
+        <span class="tag">Psikologi</span>
+        <h3>Cara Menghadapi Rasa Malas</h3>
+        <p>Trik psikologi tetap produktif dengan cara yang menyenangkan.</p>
+      </a>
+      <a href="/mengisi-waktu-luang-dengan-cara-positif-dan-santai.html" class="card">
+        <span class="tag">Lifestyle</span>
+        <h3>Isi Waktu Luang secara Positif</h3>
+        <p>Ide aktivitas kecil untuk menjaga kesehatan mental Anda.</p>
+      </a>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <strong>Hepiasik.com</strong>
-    <p style="font-size:12px; color:var(--muted); margin: 5px 0;">© 2026 Portal Bacaan Santai Berbahasa Indonesia.</p>
-    <div class="footer-links">
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/disclaimer.html">Disclaimer</a>
-    </div>
+    <p>© 2026 Hepiasik.com — Bacaan Santai Berbahasa Indonesia.</p>
   </div>
 </footer>
 
